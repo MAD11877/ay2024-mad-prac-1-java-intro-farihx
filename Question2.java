@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
-public class Question2 {
-    public static void main(String[] args) {
+public class Question2
+{
+    public static void main(String[] args)
+    {
         Scanner in = new Scanner(System.in);
-        double height = in.nextDouble();
-        double weight = in.nextDouble();
-        double bmi = calculateBMI(height, weight);
-        System.out.println(bmi);
-    }
-
-    // Method to calculate BMI
-    public static double calculateBMI(double height, double weight) {
-        return weight / (height * height);
+        
+        System.out.print("Enter your height (m): ");
+        double h = in.nextDouble();
+        
+        System.out.print("Enter your weight (kg): ");
+        double w = in.nextDouble();
+        
+        double bmi = w / (h * h);
+        
+        System.out.println("Wazoo, your BMI is: " + bmi);
     }
 }
