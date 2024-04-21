@@ -1,33 +1,27 @@
-public class Question5
-{
-    public static void main(String[] args)
-    {
+import java.util.Scanner;
 
+public class Question5 {
+    public static void main(String[] args) {
+       
         Scanner in = new Scanner(System.in);
-        
-        int cnt = in.nextInt();
-        
-        int[] num = new int[cnt];
-        
-        for (int i = 0; i < cnt; i++)
-        {
-            num[i] = in.nextInt();
+        int count = in.nextInt();
+        int[] numbers = new int[count];
+        for (int i = 0; i < count; i++) {
+            numbers[i] = in.nextInt();
         }
-        
         int mode = 0;
-        int max = 0;
-        
-        for (int i = 0; i < cnt; i++) {
-            int currentNum = num[i];
-            int currentCnt = 0;
-            for (int j = 0; j < cnt; j++) {
-                if (num[j] == currentNum) {
-                    currentCnt++;
+        int maxCount = 0;
+        for (int i = 0; i < count; i++) {
+            int currentNumber = numbers[i];
+            int currentCount = 0;
+            for (int j = 0; j < count; j++) {
+                if (numbers[j] == currentNumber) {
+                    currentCount++;
                 }
             }
-            if (currentCnt > max) {
-                mode = currentNum;
-                max = currentCount;
+            if (currentCount > maxCount) {
+                mode = currentNumber;
+                maxCount = currentCount;
             }
         }
         System.out.println(mode);
