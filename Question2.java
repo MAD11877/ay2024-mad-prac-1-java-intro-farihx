@@ -12,7 +12,6 @@ public class Question2
         double weight = 52;
         
         double bmi = weight / (height * height);
-
         System.out.println("Your BMI is: " + bmi);
     }
 }
