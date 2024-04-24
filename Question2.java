@@ -9,5 +9,6 @@ public class Question2
         in.nextLine();
         double weight = in.nextDouble();
         double bmi = weight / (height * height);
+        //print
     }
 }
